@@ -1,5 +1,13 @@
 {% extends "core/base.html" %}
 {%block title%}Mi pagina{%endblock%}
+{%load static%}{%block background%}{% static 'core/img/home-bg.jpg' %} {%endblock%}
+{%block headers%}
+    <h1>Juan Pérez</h1>
+    <span class="subheading">Ingeniero Industrial</span>
+ {%endblock%}
 {% block content %}
 <h2>les manda saludos al equipo ALFA el Ingeniero Ivek</h2>
 {% endblock  %}
+
+
+
