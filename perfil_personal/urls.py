@@ -15,14 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core import views
+from core import views as coreviews
+from portfolio import views as portvews
 from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('portfolio/', views.portfolio, name='portfolio'),
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
+    path('',coreviews.home, name='home'),
+    path('portfolio/', portvews.portfolio, name='portfolio'),
+    path('about/', coreviews.about, name='about'),
+    path('contact/', coreviews.contact, name='contact'),
 ]
 
 if settings.DEBUG:
